@@ -21,13 +21,19 @@ h3 {
 nav {
     text-align: center;
     background-color: #dddddd;
-    padding: 2px;
+    padding: 10px;
     display: block;
     margin-top: -25px;
 }
 
 nav a {
-    margin-right: 30px;
+    padding: 10px;
+    text-decoration: none;
+}
+
+#selected {
+    background-color: #5b5b5b;
+    color: #ffffff;
 }
 
 body {
@@ -47,11 +53,60 @@ footer {
     background-color: rgb(227, 201, 167);
     clear: both;
     border-top: 2px solid black;
-    margin-top: auto;
+    margin-top: 10px;
 }
 
 footer p {
     margin: 0;
+}
+
+/*Project*/
+
+ul.project {
+    text-align: left;
+    display: inline-block;
+    list-style-type: square;
+}
+
+input.project {
+    width: 10%;
+}
+
+input[type="radio"] {
+    width: 4%;
+}
+
+/*Skill*/
+
+ul.skill {
+    text-align: left;
+    display: inline-block;
+    width: 30%;
+}
+
+li {
+    padding: 5px;
+}
+
+dd {
+    padding: 10px;
+}
+
+#desc {
+    display: none;
+    margin-top: 0;
+    margin-bottom: 10px;
+    background-color: #d8d5d5;
+    padding: 10px;
+    width: 90%;
+}
+
+li.skill:hover {
+    font-weight: bold;
+}
+
+li:hover + #desc {
+    display: block;
 }
 
 /*Resume*/
@@ -72,11 +127,19 @@ table {
 td {
     padding: 20px;
     border: 1px solid;
+    background-color: white;
+}
+
+th {
+    background-color: #615f5f;
+    color: #ffffff;
+    border: 1px solid;
+    padding: 10px;
 }
 
 /* Bio */
 
-#left {
+aside.bio#left {
     float: left;
     width: 30%;
     margin-top: 1%;
@@ -88,7 +151,7 @@ main.bio {
     text-align: left;
 }
 
-#right {
+aside.bio#right {
     float: right;
     width: 25%;
 }
@@ -101,25 +164,6 @@ img#profile {
 img#flag {
     width: 100%;
     padding-top: 10%;
-}
-
-/*Skill*/
-
-div .skill {
-    text-align: center;
-}
-
-ul {
-    text-align: left;
-    display: inline-block;
-}
-
-li {
-    padding: 5px;
-}
-
-dd {
-    padding: 10px;
 }
 
 /*Contact*/

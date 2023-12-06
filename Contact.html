@@ -16,7 +16,7 @@
         <a href="Skills.html">Skills</a>
         <a href="Resume.html">Resume</a>
         <a href="Bio.html">Bio</a>
-        <a href="Contact.html">Contact</a>
+        <a href="Contact.html" id="selected">Contact</a>
     </nav>
     <main id="contact">
         <h2>Contact me</h2>
@@ -28,9 +28,14 @@
                 Email: <input type="email" name="email" id="email"><br>
                 Tel: <input type="tel" name="tel" id="tel"><br>
                 Message: <textarea name="message" id="message" rows="5" cols="30"></textarea><br>
-                <input type="submit" value="Send">
+                <input type="submit" value="Send" onclick="onSubmit()">
             </form>
         </p>
+        <script>
+            function onSubmit() {
+                alert("Thank you for your message");
+            }
+        </script>
     </main>
     <footer>
         <p>&copy; 2023 Chanon</p>
