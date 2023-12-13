@@ -19,14 +19,27 @@
         <a href="Contact.html">Contact</a>
     </nav>
     <main>
-        <h2>Welcome to my HomePage</h2>
+        <p id="welcome">Welcome To my HomePage</p>
         <div>
-            <p>
+            <p id="homepage">
                 This is my professional portfolio.<br>
                 I will demonstrate my understanding in HTML, CSS and Javascript here.<br><br>
                 You can click link to see my additional details.
             </p>
+            <p><img src="img/Hello.png" alt="hello" id="hello"></p>
         </div>
+        <script>
+            var welcome = document.getElementById("welcome");
+            var text = ["ยินดีต้อนรับ","Welcome to my HomePage"];
+            var currentIndex = 0;
+
+            function changeText() {
+                welcome.textContent = text[currentIndex];
+                currentIndex = (currentIndex+1) % 2;
+            }
+
+            setInterval(changeText,5000);
+        </script>
     </main>
     <footer>
         <p>&copy; 2023 Chanon</p>

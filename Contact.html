@@ -23,17 +23,34 @@
         <p><img src="img/tel.png" alt="phone logo" id="contact"> : <a href="tel:437-557-5675">437-557-5675</a> </p>
         <p><img src="img/Gmail_icon_(2020).svg.png" alt="gmail logo" id="contact"> : <a href="mailto:c.palawatvichai@gmail.com">c.palawatvichai@gmail.com</a> </p>
         <p><h2>Leave me a message</h2>
-            <form method="post" action="https://webdevbasics.net/scripts/demo.php">
+            <form name="contact" method="post" action="https://webdevbasics.net/scripts/demo.php">
                 Name: <input type="text" name="name" id="name"><br>
                 Email: <input type="email" name="email" id="email"><br>
                 Tel: <input type="tel" name="tel" id="tel"><br>
                 Message: <textarea name="message" id="message" rows="5" cols="30"></textarea><br>
-                <input type="submit" value="Send" onclick="onSubmit()">
+                <input type="submit" value="Send" onclick="return validateForm()">
             </form>
         </p>
         <script>
-            function onSubmit() {
-                alert("Thank you for your message");
+            function validateForm() {
+                let message = document.forms["contact"]["message"].value;
+                let name = document.forms["contact"]["name"].value;
+                let email = document.forms["contact"]["email"].value;
+                let tel = document.forms["contact"]["tel"].value;
+                if(message == "") {
+                    alert("Please enter the message");
+                    return false;
+                }
+                else if(name == "") {
+                    alert("Please enter your name");
+                    return false;
+                }
+                else if(email == "" && tel == "") {
+                    alert("Please enter your contact info");
+                    return false;
+                } else {
+                    alert("Thank you for your message");
+                }
             }
         </script>
     </main>
